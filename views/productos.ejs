@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <%- include('./partials/header', { current: 'productos' }) %>
+        </header>
+        <main>
+            <h2>Productos</h2>
+            <table class="table">
+                <%if (productos !=0){ %>
+                    <thead>
+                        <tr>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <%productos.forEach(element=> {%>
+                            <tr>
+                                <th>
+                                    <%=element.title%>
+                                </th>
+                                <th>
+                                    <%=element.price%>
+                                </th>
+                                <th><img src=<%=`${element.url}`%> alt=""></th>
+                            </tr>
+                            <%})%>
+                    </tbody>
+                    <% } else {%>
+                        <p>No hay articulos</p>
+                        <% } %>
+            </table>
+        </main>
+    </div>
+</body>
+
+</html>

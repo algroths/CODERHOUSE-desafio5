@@ -1,0 +1,25 @@
+{{>header}}
+<h2>Productos</h2>
+<table class="table">
+    {{#if productos}}
+    <thead>
+        <tr>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {{#each productos}}
+        <tr>
+            <th>{{this.title}}</th>
+            <th>{{this.price}}</th>
+            <th><img src="{{this.url}}" alt=""></th>
+        </tr>
+        {{/each}}
+    </tbody>
+    {{else}}
+    <p>No hay articulos</p>
+    {{/if}}
+</table>

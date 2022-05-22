@@ -1,0 +1,24 @@
+{{>header}}
+<form action="/productos" method="POST">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="1" name="title" required="text">
+    </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="text" class="form-control" id="2" name="price" required="text">
+    </div>
+    <div class="mb-3">
+        <label for="url" class="form-label">Url</label>
+        <input list="listaImagenes" type="text" class="form-control" id="3" name="url" required="url" value="">
+        <datalist id="listaImagenes">
+            <option value="http://localhost:8080/static/dragon.png">
+            <option value="http://localhost:8080/static/harry.png">
+            <option value="http://localhost:8080/static/spok.png">
+            <option value="http://localhost:8080/static/mario.png">
+            <option value="http://localhost:8080/static/thugLife.png">
+        </datalist>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

@@ -1,0 +1,21 @@
+extends index.pug 
+block content
+
+    form(role= 'form' action='productos' method='POST')
+        .mb-3
+            label.form-label(for='title') Title
+            input#1.form-control(type='text' name='title' required='text')
+        .mb-3
+            label.form-label(for='price') Price
+            input#2.form-control(type='text' name='price' required='text')
+        .mb-3
+            label.form-label(for='url') Url
+            input#3.form-control(list='listaImagenes' type='text' name='url' required='url' value='')
+            datalist#listaImagenes
+                option(value='http://localhost:8080/static/dragon.png')
+                option(value='http://localhost:8080/static/harry.png')
+                option(value='http://localhost:8080/static/spok.png')
+                option(value='http://localhost:8080/static/mario.png')
+                option(value='http://localhost:8080/static/thugLife.png')
+
+        button.btn.btn-primary(type='submit') Enviar

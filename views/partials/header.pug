@@ -1,0 +1,18 @@
+nav.navbar.navbar-expand-lg.bg-light
+    .container-fluid
+        a.navbar-brand(href='/')
+            img.d-inline-block.align-text-top(src='http://localhost:8080/static/pug.png' alt='' width='35')
+            |             Pug
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav
+                li.nav-item
+                    a(class= active ? 'nav-link active' : 'nav-link' aria-current='page' href='/') Form
+                li.nav-item
+                    a(class= activeP ? 'nav-link active' : 'nav-link' href='/productos') Products
+
+
+
+
+

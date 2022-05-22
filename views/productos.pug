@@ -1,0 +1,22 @@
+extends index.pug
+
+block content
+
+    h2 Productos
+    table.table
+        if productos != 0
+            thead
+                tr
+                    th(scope='col') Producto
+                    th(scope='col') Precio
+                    th(scope='col')
+            tbody
+            each val in productos
+                tr
+                    th= val.title
+                    th= val.price
+                    th
+                        img(src=`${val.url}` alt='')
+        else
+            p No hay articulos
+
